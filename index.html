@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration From</title>
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/191d896b96.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./styles.css">
+    </script>
+</head>
+<body>
+    <!-- body -->
+    <div id="container">
+        <!-- title -->
+        <div id="header"><h1>Registration Form</h1></div>
+
+        <form action="https://joinindianarmy.nic.in/Authentication.aspx" id="reg_form">
+            <div class="divider"><h5 class="div-text">Personal Details</h5><hr style="width: 82%;"></div>
+            
+            <!-- form body 1 -->
+            <div class="formbody">
+                
+                <!-- name -->
+                <div class="input field" id="name" >
+                    <label for="first-name" class="txt">First Name:</label><input id="first-name" type="text" placeholder="Enter First Name and Middle Name (if any)"><div class="warning" id="firstname_warn"></div>
+
+                    <label for="last-name" class="txt">Last Name:</label><input id="last-name"  type="text" placeholder="Enter Last Name"><div class="warning" id="lastname_warn"></div><br>
+                </div>
+
+                <!-- DOB & Gender -->
+                <div id="gender" class="field">
+                    <label for="" class="txt">DoB:</label><input type="date"  id="dob"><div class="warning" id="dob_warn"></div>
+
+                    <div id="radio"><!-- Gender -->
+                        <label for="" class="txt">Gender:</label>
+
+                        <input type="radio" id="male" name="gender" value="male" class="radio" checked onclick="check_gender(event)">
+                        <label for="male" class="label label-1">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female" class="radio" onclick="check_gender(event)">
+                        <label for="female" class="label label-2">Female</label>
+
+                        <input type="radio" id="others" name="gender" value="others" class="radio" onclick="check_gender(event)">
+                        <label for="others" class="label label-3">Others</label> 
+                    </div><div class="warning" id="gender_warn"></div><br>
+                    
+                </div>
+
+                <!-- Email -->
+                <div id="email" class="field">
+                    <label for="" class="txt">Email:</label><input type="email" name="" id="email-first" placeholder="Enter your E-mail" ><div class="warning" id="email_warn"></div><br>
+                </div>
+
+                <!-- password -->
+                <div id="password" class="field">
+                    <label for="" class="txt">Password:</label><input type="password" placeholder="Enter Password" id="new-password"><i class="see fa-solid fa-eye-slash" id="new_see"></i><div class="warning" id="new-password_warn"></div>
+                    
+                    
+                    <label for="" class="txt">Confirm Password:</label><input type="password" placeholder="Renter Password to confirm" id="check-password" disabled><i class="see fa-solid fa-eye-slash" id="check_see"></i><div class="warning" id="check-password_warn"></div><br>
+
+                    <!-- password popover -->
+                    <div id="popover">
+                        <div>
+                            1. Minimum 8 characters <br>
+                            2. A capital alphabet (A - Z) <br>
+                            3. A small alphabet (a - z)<br>
+                            4. A digit (0 - 9) <br>
+                            5. A symbol (@, #, $, &, !, ^, &, +, =, !, *) <br>
+                            6. No whitespace <br>
+                            7. Maximum 30 characters
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Address -->
+                <div id="address" class="field">
+                    <label for="" class="txt">Address 1:</label><input type="text" id="add-1" placeholder="Enter AddressLine 1" ><div class="warning" id="add_warn"></div>
+
+                    <input type="text" id="add-2" placeholder="Enter AddressLine 2(Optional)"> <br>
+                </div>
+
+
+                <!-- zipcode -->
+                <div id="zipcode" class="field">
+                    <label for="" class="txt">Zipcode:</label><input type="number" name="" id="zip-code" placeholder="Enter Zip-Code" ><div class="warning" id="zip_warn"></div><br>
+                </div>
+
+                <!-- location -->
+                <div id="location" class="field">
+                    <label for="" class="txt">Location:</label>
+                    <select name="Country" id="country" class="location">
+                        <option value="0">Select Country</option>
+                    </select><div class="warning" id="country_warn"></div>
+
+                    <select name="State" id="state" class="location" >
+                        <option value="0">Select State</option>
+                    </select><div class="warning" id="state_warn"></div>
+
+                    <select name="City" id="city" class="location" >
+                        <option value="0">Select City</option>
+                    </select><div class="warning" id="city_warn"></div> <br>
+                </div>
+
+
+                <!-- phone number -->
+                <div id="phonenumber" class="field">
+                    <label for="" class="txt">Phone 1:</label><input type="number" name="" id="phone-1" placeholder="Enter Primary Phone Number" ><div class="warning" id="phone-1_warn"></div>
+                    <label for="" class="txt">Phone 2:</label><input type="number" name="" id="phone-2" placeholder="Enter Secondary Phone Number" ><div class="warning" id="phone-2_warn"></div>
+                </div>
+            </div>
+
+
+            <!-- Educationl Details -->
+            <div class="divider"><h5>Educational Details</h5><hr></div>
+
+            <!-- form body 2 -->
+            <div class="formbody">
+                <!--  marks -->
+
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <label for="" class="txt">10th CGPA:</label><p class="max">Max 10</p><input type="number" min="0" max="10" step="0.01" name="" id="cgpa"  placeholder="Enter 10th Marks(CGPA)"><div class="warning" id="cgpa_warn"></div>
+                    </div>
+                    <div class="grid-item">
+                        <label for="" class="txt">12th Mark:</label><p class="max">Max 100%</p><input type="number" name="" min="0" max="100" step="0.01" id="mark12"  placeholder="Enter 12th Marks(%)"><div class="warning" id="mark12_warn"></div>
+                    </div>
+
+                    <div class="grid-item" id="grad">
+                        <label for="" class="txt">Graduation <br> Marks:</label><p class="max">Max 10</p><input type="number" name="" min="0" max="10" step="0.01" id="grad-mark"  placeholder="Enter Graduation Marks(CGPA)"><div class="warning" id="grad_warn"></div>
+                    </div>
+
+                    <div class="grid-item" id="degree">
+                        <label for="" class="txt">Degree <br> Marks:</label><p class="max">Max 10</p><input type="number" name="" min="0" max="10" step="0.01" id="degree-mark"  placeholder="Enter Degree Marks(CGPA)"><div class="warning" id="degree_mark"></div>
+                    </div>    
+                </div>
+            </div>   
+
+            <!-- Buttons -->
+            <div id="btn">
+                <button id="submit-btn">Submit</button>
+                <button id="reset-btn" name="reset"  type="button">Reset</button>
+            </div>
+        
+        </form>
+
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>You Have Completed This Form</h2>
+            </div>
+            <div class="modal-body">
+                <h5 class="line">Full Name:<span class="span-field txtfull-name"></span></h5>
+                <h5 class="line">Date of Birth:<span class="span-field txtdate"></span></h5>
+                <h5 class="line">Gender<span class="span-field txtgender"></span></h5>
+                <h5 class="line">E-mail:<span class="span-field txtemail"></span></h5>
+                <h5 class="line">Password:<span class="span-field txtpwd"></span></h5>
+                <h5 class="line">Address-1:<span class="span-field txtadd1"></span></h5>
+                <h5 class="line">Address-2:<span class="span-field txtadd2"></span></h5>
+                <h5 class="line">Zip-code:<span class="span-field txtzip"></span></h5>
+                <h5 class="line">Phone-1:<span class="span-field txtphone1"></span></h5>
+                <h5 class="line">Phone-2:<span class="span-field txtphone2"></span></h5>
+                <h5 class="line">10th CGPA:<span class="span-field txt10th"></span></h5>
+                <h5 class="line">12th Mark:<span class="span-field txt12th"></span></h5>
+                <h5 class="line">Graduation CGPA<span class="span-field txtgrad"></span></h5>
+                <h5 class="line">Degree:<span class="span-field txtdegree"></span></h5>
+                <h5 class="line">Country:<span class="span-field txtcountry"></span></h5>
+                <h5 class="line">State:<span class="span-field txtstate"></span></h5>
+                <h5 class="line">City:<span class="span-field txtcity"></span></h5>
+            </div>
+            <div class="modal-footer">
+                <h3>Thank You</h3><button id="close" >Close</button>
+            </div>
+        </div>
+      
+    </div>
+    
+    
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

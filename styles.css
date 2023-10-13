@@ -1,0 +1,465 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif; 
+   
+}
+#container{
+    width: 98%;
+    height: 97%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    
+}
+#header{
+    background-color: rgb(37, 117, 192);
+    height: 70px;
+    border-radius: 5px 5px 0 0 ;
+}
+h1{    
+    
+    color: white;
+    font-family: Sans-serif, Monospace;
+    font-size: 30px;
+    position: relative;
+    top: 15px;
+    width: 500px;
+    margin-left: 15px;
+    overflow: auto;
+    
+}
+.divider{
+    margin: 10px;
+    display: flex;
+    margin-top: 25px;
+}
+hr{
+    height: 5px;
+    background-color: rgb(31, 118, 199);
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 5px;
+}
+h5{
+    font-size: 16px;
+    margin-top: -6PX;
+    margin-right: 4px;
+
+}
+
+.formbody{
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+.field{
+    margin-bottom: 20px;
+}
+.warning{
+    display: inline-block;
+    width: 170px;
+    margin-right: 20px;
+    font-size: small;
+}
+
+
+/* text */
+.txt{
+    font-family: Sans-serif, Monospace;
+    font-size: 13px;
+    margin-right: 6px;
+    
+}
+
+input{
+    width: 25%;
+    height: 35px;
+    margin-right: 200px;
+    border: 1px solid rgb(197, 191, 191);
+    border-radius: 5px;
+    text-indent: 5%;
+}
+input::placeholder{
+    text-indent: 5%;
+}
+/* first-name */
+#name #first-name{
+   margin-right: 7px;
+
+}
+/* last-name */
+#name #last-name{
+    margin-right: 7px;
+ 
+ }
+
+
+/* DOB*/
+#gender{
+    display: flex;
+    align-items: center;
+}
+#gender input[type="date"]{
+    margin-left: 39px;
+    width: 190px;
+    padding: 3px;
+    color: grey;
+    margin-right: 7px;
+}
+#gender .warning{
+    width: 290px;
+    margin-right: 10px;
+}
+#gender .warning:nth-of-type(2){
+    width: 200px;
+    margin-left: 20px;
+}
+
+/* gender Radio */
+
+.radio{
+    display: none;
+}
+
+.label{
+    padding: 5px 10px;
+    background-color: #888;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#male:checked ~ .label-1,
+#female:checked ~ .label-2,
+#others:checked ~ .label-3{
+    background-color: rgb(37, 117, 192);
+}
+
+
+
+/* email first-part */
+#email #email-first{
+    margin-left: 30px;
+    margin-right: 15px;
+}
+#email .warning{
+    width: 350px;
+}
+
+/* password */
+#password{
+    position: relative;
+}
+#password #new-password{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+
+#new_see{
+    position: absolute;
+    left: 340px;
+    top: 10px;
+    opacity: 0.5;
+} 
+#check_see{
+    position: absolute;
+    right: 210px;
+    top: 10px;
+    opacity: 0.5;;
+}
+
+
+/* popover */
+#popover {
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: small;
+    color: yellow;
+    background-color: brown;
+    position: absolute;
+    top: 40px;
+    z-index: 99;
+    display: none;
+}
+
+
+#password #check-password{
+    margin-right: 10px;
+}
+
+/* address-1 */
+#address #add-1{
+    margin-left: 3px;
+    margin-right: 15px;
+    width: 400px;
+    text-indent: 3%;
+}
+#add-2{
+    width: 350px;
+    margin-right: 0;
+}
+
+#add-1::placeholder, #add-2::placeholder{
+    text-indent: 3%;
+}
+
+/* zipcode */
+#zipcode #zip-code{
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+/* location */
+#location select{
+    width: 180px;
+    height: 35px;
+    margin-right: 10px;
+    color: grey;
+    margin-left: 6px;
+    border: 1px solid rgb(197, 191, 191);
+    border-radius: 5px;
+    text-indent: 5%;
+}
+
+#location .txt {
+    margin-top: 30px;
+    text-align: right;
+    margin-bottom: -10px;
+}
+
+#location .warning{
+    margin-right: 0;
+}
+
+/* phonenumber */
+#phonenumber #phone-1{
+    margin-left: 9px;
+    margin-right: 5px;
+}
+
+#phonenumber #phone-2{
+    margin-right:5px;
+}
+
+
+
+/* education */
+
+.max{
+    width: 88px;
+    /* height: 35px; */
+    text-align: center;
+    border: 1px solid rgb(197, 191, 191);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 0px;    /*doubt*/
+
+}
+
+.grid-container{
+    
+    display: grid;
+    grid-template-columns: 550px auto;
+    row-gap: 19px;
+}
+
+.grid-item{
+    display: flex;
+    
+}
+.grid-item label{
+    margin-top: 10px;
+}
+.grid-item .max{
+    position: relative;
+    left: 20px;
+    height: 35px;
+    z-index: 99;
+    background-color: rgb(236, 233, 233);
+    color: grey;
+}
+.grid-item input[type="number"]{
+    width: 280px;
+    margin-right: 0px;
+    text-indent: 10%;
+
+}
+.grid-item input[type="number"]::placeholder{
+    text-align: center;
+}
+#degree .max{
+    margin-left: 18px;
+    
+}
+#degree .txt{
+    margin-top: 0;
+}
+#grad .txt{
+    margin-left: px;
+    margin-top: 0;
+}
+#grad .max{
+    margin-left: 4px;
+    
+}
+
+
+/* button */
+#btn{
+    text-align: right;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+#btn :first-child{
+    color: white;
+    background-color: rgb(37, 117, 192);
+    width: 100px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+}
+#btn :last-child{
+    color: white;
+    background-color: rgb(235, 175, 46);
+    width: 90px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.error{
+    color: red;
+    
+}
+
+.success{
+    color: green;
+    
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /*Stay in place*/
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+  
+  /* Modal Content/Box */
+  .modal-content {
+    
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%; /* Could be more or less, depending on screen size */
+     
+}
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgb(37, 117, 192);
+    color: white;
+   
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 15px 16px;
+    
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 10px;
+    grid-auto-flow: row dense;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+}
+.span-field{
+    margin-right: 60px;
+    color: black;
+}
+  
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(37, 117, 192);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  #close{
+    padding: 5px 10px;
+    background-color: rgb(235, 175, 46);
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+  #close:hover{
+    background-color: yellowgreen;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
